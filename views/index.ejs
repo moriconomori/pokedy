@@ -1,11 +1,25 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="ja">
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pokedy</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <div class="question">
+      <span class="attack fire">ほのお</span>
+      <span>vs</span>
+      <span class="defense water">みず</span>
+      <div class="question-text">
+        <span>効果は？</span>
+      </div>
+    </div>
+    <div class="answer">
+      <button>ばつぐんだ！</button>
+      <button>ふつう</button>
+      <button>いまひとつ...</button>
+      <button>ない...</button>
+    </div>
   </body>
 </html>
