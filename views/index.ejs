@@ -7,19 +7,35 @@
     <link rel="stylesheet" href="/stylesheets/style.css">
   </head>
   <body>
-    <div class="question">
-      <span class="attack fire">ほのお</span>
-      <span>vs</span>
-      <span class="defense water">みず</span>
-      <div class="question-text">
-        <span>効果は？</span>
+    <div class="questionWrapper">
+      <div class="questionItem">
+        <div class="questionHeader">
+          <span>こうげき</span>
+        </div>
+        <div class="questionContent pokeType typeFire">
+          <span class="typeName">ほのお</span>
+        </div>
+      </div>
+      <div class="questionContent">
+        <span>vs</span>
+      </div>
+      <div class="questionItem">
+        <div class="questionHeader">
+          <span>ぼうぎょ</span>
+        </div>
+        <div class="questionContent pokeType typeWater">
+          <span class="typeName">みず</span>
+        </div>
       </div>
     </div>
-    <div class="answer">
-      <button>ばつぐんだ！</button>
-      <button>ふつう</button>
-      <button>いまひとつ...</button>
-      <button>ない...</button>
+    <div class="questionText">
+      <span>効果は?</span>
+    </div>
+    <div class="answerWrapper">
+      <button class="answerButton">ばつぐんだ！</button>
+      <button class="answerButton">ふつう</button>
+      <button class="answerButton">いまひとつ...</button>
+      <button class="answerButton">ない...</button>
     </div>
   </body>
 </html>

@@ -1,0 +1,58 @@
+body {
+  font-family: 'Hiragino Sans', '游ゴシック', meiryo, sans-serif;
+  background-color: #fffff0;
+}
+
+.questionWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.questionHeader {
+  text-align: center;
+  font-size: 80%;
+  margin: 4px 0;
+}
+
+.questionItem {
+  margin: 0 10px;
+}
+
+.questionText {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.pokeType {
+  min-width: 96px;
+  min-height: 40px;
+  border: 2px solid #dfdfdf;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.typeName {
+  line-height: 40px;
+}
+
+.typeFire {
+  background-color: #e4653f;
+}
+
+.typeWater {
+  background-color: #50abda;
+}
+
+.answerWrapper {
+}
+
+.answerButton {
+  display: block;
+  height: 44px;
+  width: 50%;
+  max-width: 200px;
+  margin: 24px auto;
+  border-radius: 8px;
+}
