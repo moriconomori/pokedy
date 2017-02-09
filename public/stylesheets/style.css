@@ -51,7 +51,7 @@ body {
 .answerButtonWrapper {
   margin: 18px auto;
   width: 40%;
-  min-width: 216px;
+  max-width: 216px;
 }
 
 .answerButton {
