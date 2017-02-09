@@ -33,22 +33,25 @@
         </div>
       </div>
     </div>
+
     <div class="questionText">
       <span>効果は?</span>
     </div>
+
     <div class="answerWrapper">
       <div class="answerButtonWrapper">
-        <button class="mui-btn mui-btn--raised answerButton">ばつぐんだ！</button>
+        <button class="mui-btn mui-btn--raised answerButton" onclick="answerModal('question', 'effective')">ばつぐんだ！</button>
       </div>
       <div class="answerButtonWrapper">
-        <button class="mui-btn mui-btn--raised answerButton">ふつう</button>
+        <button class="mui-btn mui-btn--raised answerButton" onclick="answerModal('question', 'normal')">ふつう</button>
       </div>
       <div class="answerButtonWrapper">
-        <button class="mui-btn mui-btn--raised answerButton">いまひとつ...</button>
+        <button class="mui-btn mui-btn--raised answerButton" onclick="answerModal('question', 'bad')">いまひとつ...</button>
       </div>
       <div class="answerButtonWrapper">
-        <button class="mui-btn mui-btn--raised answerButton">ない...</button>
+        <button class="mui-btn mui-btn--raised answerButton" onclick="answerModal('question', 'nothing')">ない...</button>
       </div>
     </div>
+
   </body>
 </html>
