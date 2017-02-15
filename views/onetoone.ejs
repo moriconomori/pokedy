@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pokedy</title>
+    <link rel="stylesheet" href="/stylesheets/mui.min.css">
+    <script src="/javascripts/mui.min.js"></script>
+    <script src="/javascripts/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="/javascripts/script.js"></script>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/images/favicon.ico">
+  </head>
+  <body>
+    <div class="questionWrapper">
+      <div class="questionItem">
+        <div class="questionHeader">
+          <span>こうげき</span>
+        </div>
+        <div class="questionContent pokeType typeFire">
+          <span class="typeName"><%= attack %></span>
+        </div>
+      </div>
+      <div class="questionContent">
+        <span>vs</span>
+      </div>
+      <div class="questionItem">
+        <div class="questionHeader">
+          <span>ぼうぎょ</span>
+        </div>
+        <div class="questionContent pokeType typeWater">
+          <span class="typeName"><%= defense %></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="questionText">
+      <span>効果は?</span>
+    </div>
+
+    <div class="answerWrapper">
+      <div class="answerButtonWrapper">
+        <button class="mui-btn mui-btn--raised answerButton" onclick="answerModal('question', 'effective')">ばつぐんだ！</button>
+      </div>
+      <div class="answerButtonWrapper">
+        <button class="mui-btn mui-btn--raised answerButton" onclick="answerModal('question', 'normal')">ふつう</button>
+      </div>
+      <div class="answerButtonWrapper">
+        <button class="mui-btn mui-btn--raised answerButton" onclick="answerModal('question', 'bad')">いまひとつ...</button>
+      </div>
+      <div class="answerButtonWrapper">
+        <button class="mui-btn mui-btn--raised answerButton" onclick="answerModal('question', 'nothing')">ない...</button>
+      </div>
+    </div>
+
+  </body>
+</html>
