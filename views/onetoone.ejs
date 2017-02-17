@@ -37,20 +37,25 @@
     </div>
 
     <div class="answerWrapper">
-      <div class="answerButtonWrapper">
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect answerButton">ばつぐんだ！</button>
-      </div>
-      <div class="answerButtonWrapper">
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect answerButton">ふつう</button>
-      </div>
-      <div class="answerButtonWrapper">
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect answerButton">いまひとつ...</button>
-      </div>
-      <div class="answerButtonWrapper">
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect answerButton">ない...</button>
-      </div>
+      <form action="/onetoone/answer" method="post">
+        <input type="hidden" name="attack" value="<%= attack %>">
+        <input type="hidden" name="defense" value="<%= defense %>">
+        <div class="answerButtonWrapper">
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect answerButton" type="submit" name="answer" value="effective">ばつぐんだ！</button>
+        </div>
+        <div class="answerButtonWrapper">
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect answerButton" type="submit" name="answer" value="normal">ふつう</button>
+        </div>
+        <div class="answerButtonWrapper">
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect answerButton" type="submit" name="answer" value="bad">いまひとつ...</button>
+        </div>
+        <div class="answerButtonWrapper">
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect answerButton" type="submit" name="answer" value="nothing">ない...</button>
+        </div>
+      </form>
     </div>
 
+    <script src="/javascripts/jquery-3.1.1.min.js"></script>
     <script src="/javascripts/script.js"></script>
   </body>
 </html>
