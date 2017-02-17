@@ -37,12 +37,76 @@ body {
   color: #ffffff;
 }
 
+.typeNormal {
+  background-color: #b1b1b1;
+}
+
 .typeFire {
   background-color: #e4653f;
 }
 
 .typeWater {
   background-color: #50abda;
+}
+
+.typeGrass {
+  background-color: #9ac30e;
+}
+
+.typeElectric {
+  background-color: #e8c71a;
+}
+
+.typeIce {
+  background-color: #53c4e5;
+}
+
+.typeFighting {
+  background-color: #e89a3f;
+}
+
+.typePoison {
+  background-color: #ba79c1;
+}
+
+.typeGround {
+  background-color: #c8a841;
+}
+
+.typeFlying {
+  background-color: #5e9fe2;
+}
+
+.typePsychic {
+  background-color: #e885b2;
+}
+
+.typeBug {
+  background-color: #6cbe50;
+}
+
+.typeRock {
+  background-color: #b08754;
+}
+
+.typeGhost {
+  background-color: #756eb4;
+}
+
+.typeDragon {
+  background-color: #6c81c8;
+}
+
+.typeDark {
+  background-color: #5a3c1e;
+}
+
+.typeSteel {
+  background-color: #919191;
+}
+
+.typeFairy {
+  background-color: #e06cbb;
 }
 
 .answerWrapper {

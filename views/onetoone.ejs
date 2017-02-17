@@ -9,7 +9,6 @@
     <script src="/javascripts/jquery-3.1.1.min.js"></script>
     <link rel="stylesheet" href="/stylesheets/style.css">
     <script src="/javascripts/script.js"></script>
-    <link rel="icon" type="image/vnd.microsoft.icon" href="/images/favicon.ico">
   </head>
   <body>
     <div class="questionWrapper">
@@ -17,8 +16,8 @@
         <div class="questionHeader">
           <span>こうげき</span>
         </div>
-        <div class="questionContent pokeType typeFire">
-          <span class="typeName"><%= attack %></span>
+        <div class="questionContent pokeType type<%= attack %>">
+          <span class="typeName"><%= attackName %></span>
         </div>
       </div>
       <div class="questionContent">
@@ -28,8 +27,8 @@
         <div class="questionHeader">
           <span>ぼうぎょ</span>
         </div>
-        <div class="questionContent pokeType typeWater">
-          <span class="typeName"><%= defense %></span>
+        <div class="questionContent pokeType type<%= defense %>">
+          <span class="typeName"><%= defenseName %></span>
         </div>
       </div>
     </div>
