@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pokedy</title>
+    <link rel="stylesheet" href="/stylesheets/normalize.css">
+    <link rel="stylesheet" href="/stylesheets/material.min.css">
+    <script src="/javascripts/material.min.js"></script>
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <script src="/javascripts/script.js"></script>
   </head>
   <body>
     <div class="questionWrapper">
@@ -36,18 +38,19 @@
 
     <div class="answerWrapper">
       <div class="answerButtonWrapper">
-        <button class="mui-btn mui-btn--raised answerButton" onclick="answerModal('question', 'effective')">ばつぐんだ！</button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect answerButton">ばつぐんだ！</button>
       </div>
       <div class="answerButtonWrapper">
-        <button class="mui-btn mui-btn--raised answerButton" onclick="answerModal('question', 'normal')">ふつう</button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect answerButton">ふつう</button>
       </div>
       <div class="answerButtonWrapper">
-        <button class="mui-btn mui-btn--raised answerButton" onclick="answerModal('question', 'bad')">いまひとつ...</button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect answerButton">いまひとつ...</button>
       </div>
       <div class="answerButtonWrapper">
-        <button class="mui-btn mui-btn--raised answerButton" onclick="answerModal('question', 'nothing')">ない...</button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect answerButton">ない...</button>
       </div>
     </div>
 
+    <script src="/javascripts/script.js"></script>
   </body>
 </html>

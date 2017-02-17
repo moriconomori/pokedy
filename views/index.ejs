@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pokedy</title>
+    <link rel="stylesheet" href="/stylesheets/normalize.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <script src="/javascripts/script.js"></script>
   </head>
   <body>
     <div class="questionWrapper">
@@ -36,18 +36,19 @@
 
     <div class="answerWrapper">
       <div class="answerButtonWrapper">
-        <button class="mui-btn mui-btn--raised answerButton" onclick="answerModal('question', 'effective')">ばつぐんだ！</button>
+        <button class="answerButton">ばつぐんだ！</button>
       </div>
       <div class="answerButtonWrapper">
-        <button class="mui-btn mui-btn--raised answerButton" onclick="answerModal('question', 'normal')">ふつう</button>
+        <button class="answerButton">ふつう</button>
       </div>
       <div class="answerButtonWrapper">
-        <button class="mui-btn mui-btn--raised answerButton" onclick="answerModal('question', 'bad')">いまひとつ...</button>
+        <button class="answerButton">いまひとつ...</button>
       </div>
       <div class="answerButtonWrapper">
-        <button class="mui-btn mui-btn--raised answerButton" onclick="answerModal('question', 'nothing')">ない...</button>
+        <button class="answerButton">ない...</button>
       </div>
     </div>
 
+    <script src="/javascripts/script.js"></script>
   </body>
 </html>

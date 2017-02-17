@@ -1,6 +1,6 @@
 body {
   font-family: 'Hiragino Sans', '游ゴシック', meiryo, sans-serif;
-  background-color: #fffff0;
+  background-color: #ffffff;
 }
 
 .questionWrapper {
@@ -27,7 +27,7 @@ body {
 
 .pokeType {
   min-width: 96px;
-  border: 2px solid #dfdfdf;
+  border: none;
   border-radius: 16px;
   text-align: center;
 }
@@ -114,10 +114,11 @@ body {
 
 .answerButtonWrapper {
   margin: 18px auto;
-  width: 40%;
-  max-width: 216px;
+  width: 50%;
+  max-width: 200px;
 }
 
 .answerButton {
   width: 100%;
+  min-width: 96px;
 }
