@@ -17,9 +17,6 @@ router.post('/answer', function(req, res, next) {
   var attack = req.body.attack;
   var defense = req.body.defense;
   var choosed = req.body.answer;
-  console.log('attack: ' + attack);
-  console.log('defense: ' + defense);
-  console.log('choosed: ' + choosed);
 
   res.render('correct', {
     attack: attack,
