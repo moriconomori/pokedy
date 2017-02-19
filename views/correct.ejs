@@ -63,18 +63,19 @@
             </div>
           </div>
         </div>
-        <div class="alert alert-<%= alertStyle %> text-center" role="alert"><%= correctMsg %></div>
-
-        <% if (!isCorrect) { %>
-        <div class="verifyAnswerContainer text-center">
-          <a class="btn btn-default" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">正解を確認する</a>
-          <div class="collapse" id="collapseExample">
-            <div class="showAnswerContainer">
-              <p class><%= compat %></p>
+        <div class="alert alert-<%= alertStyle %> text-center" role="alert">
+          <p><%= correctMsg %></p>
+          <% if (!isCorrect) { %>
+          <div class="verifyAnswerContainer text-center">
+            <a class="btn btn-default" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">正解を確認する</a>
+            <div class="collapse" id="collapseExample">
+              <div class="showAnswerContainer">
+                <p class><%= compat %></p>
+              </div>
             </div>
           </div>
+          <% } %>
         </div>
-        <% } %>
 
         <div class="text-center">
             <a href="/onetoone" class="btn btn-default next">> 次の問題へ</a>
