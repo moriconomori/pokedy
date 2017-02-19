@@ -1,6 +1,5 @@
 body {
   font-family: 'Hiragino Sans', '游ゴシック', meiryo, sans-serif;
-  /*background-color: #fafafa;*/
 }
 
 .questionWrapper {
@@ -161,20 +160,39 @@ body {
   color: initial;
 }
 
-main .container {
-  padding-bottom: 60px;
+.getready.container {
+  margin: 4rem auto;
 }
 
-/*
- * footer
- */
+
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
 .footer {
-  width: 100%;
-  background-color: #f5f5f5;
-  position: fixed;
+  position: absolute;
   bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
 }
 
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 60px 15px 0;
+}
 .container .text-muted {
   margin: 20px 0;
 }
@@ -184,6 +202,6 @@ main .container {
   padding-left: 15px;
 }
 
-.center {
-  text-align: center;
+code {
+  font-size: 80%;
 }
