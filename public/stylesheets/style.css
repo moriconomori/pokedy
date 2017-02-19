@@ -174,11 +174,13 @@ body {
 }
 
 .answer__correct {
-  background: #dff0d8;
+  background: #dff0d8 url('../images/correct.png') no-repeat center center;
+  background-size: contain;
 }
 
 .answer__incorrect {
-  background: #f2dede;
+  background: #f2dede url('../images/incorrect.png') no-repeat center center;
+  background-size: contain;
 }
 
 

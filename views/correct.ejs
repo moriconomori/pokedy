@@ -57,9 +57,7 @@
           <% } %>
           <div class="panel-body answer__<%= answerStyle %>">
             <div class="text-center">
-              <div class="answerButtonWrapper">
-                <button class="btn btn-default answerButton"><%= choosed %></button>
-              </div>
+              <p><%= choosed %></p>
               <div><%= correctMsg %></div>
               <% if (!isCorrect) { %>
               <div class="verifyAnswerContainer">
