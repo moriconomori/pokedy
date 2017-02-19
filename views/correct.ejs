@@ -50,35 +50,36 @@
           <% var state = 'success'; %>
           <% var correctMsg = '正解!'; %>
           <% var answerStyle = 'correct'; %>
+          <% var alertStyle = 'info'; %>
           <% } else { %>
           <% var state = 'danger'; %>
           <% var correctMsg = '不正解...'; %>
           <% var answerStyle = 'incorrect'; %>
+          <% var alertStyle = 'warning'; %>
           <% } %>
-          <div class="panel-body answer__<%= answerStyle %>">
-            <div class="text-center">
-              <p><%= choosed %></p>
-              <div><%= correctMsg %></div>
-              <% if (!isCorrect) { %>
-              <div class="verifyAnswerContainer">
-                <a class="btn btn-default" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">正解を確認する</a>
-                <div class="collapse" id="collapseExample">
-                  <div class="showAnswerContainer">
-                    <p class><%= compat %></p>
-                  </div>
-                </div>
-              </div>
-              <% } %>
+          <div class="panel-body answer__<%= answerStyle %> text-center">
+            <div class="answer-background__<%= answerStyle %>">
+              <div class="answer-text"><%= choosed %></div>
             </div>
           </div>
         </div>
+        <div class="alert alert-<%= alertStyle %> text-center" role="alert"><%= correctMsg %></div>
 
-        <div class="verifyAnswer">
-            <div class="text-center">
-                <a href="/onetoone" class="btn btn-default next">> 次の問題へ</a>
+        <% if (!isCorrect) { %>
+        <div class="verifyAnswerContainer text-center">
+          <a class="btn btn-default" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">正解を確認する</a>
+          <div class="collapse" id="collapseExample">
+            <div class="showAnswerContainer">
+              <p class><%= compat %></p>
             </div>
+          </div>
         </div>
+        <% } %>
 
+        <div class="text-center">
+            <a href="/onetoone" class="btn btn-default next">> 次の問題へ</a>
+        </div>
+      </div>
     </div>
 
     <footer class="footer">

@@ -157,7 +157,7 @@ body {
   color: initial;
 }
 
-.getready.container {
+.getreadyContainer {
   margin: 4rem auto;
 }
 
@@ -174,15 +174,26 @@ body {
 }
 
 .answer__correct {
-  background: #dff0d8 url('../images/correct.png') no-repeat center center;
-  background-size: contain;
+  background: #dff0d8;
 }
 
 .answer__incorrect {
-  background: #f2dede url('../images/incorrect.png') no-repeat center center;
+  background: #f2dede;
+}
+
+.answer-background__correct {
+  background: url('../images/correct.png') no-repeat center center;
   background-size: contain;
 }
 
+.answer-background__incorrect {
+  background: url('../images/incorrect.png') no-repeat center center;
+  background-size: contain;
+}
+
+.answer-text {
+  font-size: 2.0rem;
+}
 
 /* Sticky footer styles
 -------------------------------------------------- */
