@@ -173,6 +173,14 @@ body {
   margin: 1rem auto;
 }
 
+.answer__correct {
+  background: #dff0d8;
+}
+
+.answer__incorrect {
+  background: #f2dede;
+}
+
 
 /* Sticky footer styles
 -------------------------------------------------- */
