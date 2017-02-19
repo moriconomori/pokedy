@@ -17,6 +17,7 @@ router.post('/answer', function(req, res, next) {
   var attack = req.body.attack;
   var defense = req.body.defense;
   var choosed = req.body.answer;
+  var isCorrect = isCorrectAnswer(attack, defense, choosed);
 
   res.render('correct', {
     attack: attack,
@@ -24,16 +25,17 @@ router.post('/answer', function(req, res, next) {
     defense: defense,
     defenseName: typeName[defense],
     choosed: effect[choosed],
-    correct: isCorrect(attack, defense, choosed)
+    isCorrect: isCorrect,
+    compat: effect[getCompatibility(attack, defense)]
   });
 });
 
-function isCorrect(attack, defense, choosed) {
+function isCorrectAnswer(attack, defense, choosed) {
   var expected = getCompatibility(attack, defense);
   if (choosed == expected) {
-    return correct[true];
+    return true;
   } else {
-    return correct[false];
+    return false;
   }
 }
 
