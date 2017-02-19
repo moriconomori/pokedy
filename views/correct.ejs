@@ -1,70 +1,78 @@
 <!doctype html>
 <html lang="ja">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pokedy</title>
-    <link rel="stylesheet" href="/stylesheets/normalize.css">
     <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
-    <link rel="stylesheet" href="/stylesheets/material.min.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
-  </head>
-  <body>
+</head>
 
-    <nav class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="/">Pokedy</a>
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Pokedy</a>
+            </div>
         </div>
-      </div>
     </nav>
 
-    <div class="questionWrapper">
-      <div class="questionItem">
-        <div class="questionHeader">
-          <span>こうげき</span>
+    <div class="container">
+        <div class="questionWrapper">
+            <div class="questionItem">
+                <div class="questionHeader">
+                    <span>こうげき</span>
+                </div>
+                <div class="questionContent pokeType type<%= attack %>">
+                    <span id="attackType" class="typeName" data-attack="<%= attack %>"><%= attackName %></span>
+                </div>
+            </div>
+            <div class="questionContent">
+                <span>vs</span>
+            </div>
+            <div class="questionItem">
+                <div class="questionHeader">
+                    <span>ぼうぎょ</span>
+                </div>
+                <div class="questionContent pokeType type<%= defense %>">
+                    <span id="defenseType" class="typeName" data-defense="<%= defense %>"><%= defenseName %></span>
+                </div>
+            </div>
         </div>
-        <div class="questionContent pokeType type<%= attack %>">
-          <span id="attackType" class="typeName" data-attack="<%= attack %>"><%= attackName %></span>
-        </div>
-      </div>
-      <div class="questionContent">
-        <span>vs</span>
-      </div>
-      <div class="questionItem">
-        <div class="questionHeader">
-          <span>ぼうぎょ</span>
-        </div>
-        <div class="questionContent pokeType type<%= defense %>">
-          <span id="defenseType" class="typeName" data-defense="<%= defense %>"><%= defenseName %></span>
-        </div>
-      </div>
-    </div>
 
-    <div class="verifyAnswer mdl-card mdl-shadow--2dp">
-      <div class="mdl-card__title">
-        <h2 class="mdl-card__title-text">あなたの解答</h2>
-      </div>
-      <div class="mdl-card__supporting-text">
-        <div class="answerButtonWrapper">
-          <button class="mdl-button mdl-js-button mdl-button--raised answerButton"><%= choosed %></button>
+        <div class="verifyAnswer">
+            <div class="text-center">
+                <h2 class="">あなたの解答</h2>
+            </div>
+            <div class="text-center">
+                <div class="answerButtonWrapper">
+                  <% if (correct === '正解！') { %>
+                  <% var state = 'success'; %>
+                  <% } else { %>
+                  <% var state = 'danger'; %>
+                  <% } %>
+                  <button class="btn btn-<%= state %> answerButton"><%= choosed %></button>
+                </div>
+                <%= correct %>
+            </div>
+            <div class="text-center">
+                <a href="/onetoone" class="btn btn-default next">次の問題へ</a>
+            </div>
         </div>
-        <%= correct %>
-      </div>
-      <div class="mdl-card__actions mdl-card--border">
-        <a href="/onetoone" class="mdl-button mdl-js-button mdl-button--primary next">次の問題へ</a>
-      </div>
+
     </div>
 
     <footer class="footer">
-      <div class="container">
-        <p class="text-muted">Copyright &copy; 2017 Morico All Rights Reserved.</p>
-      </div>
+        <div class="container">
+            <p class="text-muted">&copy; 2017 Morico All Rights Reserved.</p>
+        </div>
     </footer>
 
     <script src="/javascripts/jquery-3.1.1.min.js"></script>
     <script src="/javascripts/bootstrap.min.js"></script>
-    <script src="/javascripts/material.min.js"></script>
     <script src="/javascripts/script.js"></script>
-  </body>
+</body>
+
 </html>

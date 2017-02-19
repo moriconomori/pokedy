@@ -1,78 +1,80 @@
 <!doctype html>
 <html lang="ja">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pokedy</title>
-    <link rel="stylesheet" href="/stylesheets/normalize.css">
     <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
-    <link rel="stylesheet" href="/stylesheets/material.min.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
-  </head>
-  <body>
+</head>
 
-    <nav class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="/">Pokedy</a>
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Pokedy</a>
+            </div>
         </div>
-      </div>
     </nav>
 
-    <div class="questionWrapper">
-      <div class="questionItem">
-        <div class="questionHeader">
-          <span>こうげき</span>
+    <div class="container">
+        <div class="questionWrapper">
+            <div class="questionItem">
+                <div class="questionHeader">
+                    <span>こうげき</span>
+                </div>
+                <div class="questionContent pokeType type<%= attack %>">
+                    <span class="typeName"><%= attackName %></span>
+                </div>
+            </div>
+            <div class="questionContent">
+                <span>vs</span>
+            </div>
+            <div class="questionItem">
+                <div class="questionHeader">
+                    <span>ぼうぎょ</span>
+                </div>
+                <div class="questionContent pokeType type<%= defense %>">
+                    <span class="typeName"><%= defenseName %></span>
+                </div>
+            </div>
         </div>
-        <div class="questionContent pokeType type<%= attack %>">
-          <span class="typeName"><%= attackName %></span>
-        </div>
-      </div>
-      <div class="questionContent">
-        <span>vs</span>
-      </div>
-      <div class="questionItem">
-        <div class="questionHeader">
-          <span>ぼうぎょ</span>
-        </div>
-        <div class="questionContent pokeType type<%= defense %>">
-          <span class="typeName"><%= defenseName %></span>
-        </div>
-      </div>
-    </div>
 
-    <div class="questionText">
-      <span>効果は?</span>
-    </div>
+        <div class="questionText">
+            <span>効果は?</span>
+        </div>
 
-    <div class="answerWrapper">
-      <form action="/onetoone/answer" method="post">
-        <input type="hidden" name="attack" value="<%= attack %>">
-        <input type="hidden" name="defense" value="<%= defense %>">
-        <div class="answerButtonWrapper">
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect answerButton" type="submit" name="answer" value="effective">ばつぐんだ！</button>
+        <div class="answerWrapper">
+            <form action="/onetoone/answer" method="post">
+                <input type="hidden" name="attack" value="<%= attack %>">
+                <input type="hidden" name="defense" value="<%= defense %>">
+                <div class="answerButtonWrapper">
+                    <button class="btn btn-default answerButton" type="submit" name="answer" value="effective">ばつぐんだ！</button>
+                </div>
+                <div class="answerButtonWrapper">
+                    <button class="btn btn-default answerButton" type="submit" name="answer" value="normal">ふつう</button>
+                </div>
+                <div class="answerButtonWrapper">
+                    <button class="btn btn-default answerButton" type="submit" name="answer" value="bad">いまひとつ...</button>
+                </div>
+                <div class="answerButtonWrapper">
+                    <button class="btn btn-default answerButton" type="submit" name="answer" value="nothing">ない...</button>
+                </div>
+            </form>
         </div>
-        <div class="answerButtonWrapper">
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect answerButton" type="submit" name="answer" value="normal">ふつう</button>
-        </div>
-        <div class="answerButtonWrapper">
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect answerButton" type="submit" name="answer" value="bad">いまひとつ...</button>
-        </div>
-        <div class="answerButtonWrapper">
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect answerButton" type="submit" name="answer" value="nothing">ない...</button>
-        </div>
-      </form>
     </div>
 
     <footer class="footer">
-      <div class="container">
-        <p class="text-muted">Copyright &copy; 2017 Morico All Rights Reserved.</p>
-      </div>
+        <div class="container">
+            <p class="text-muted">&copy; 2017 Morico All Rights Reserved.</p>
+        </div>
     </footer>
 
     <script src="/javascripts/jquery-3.1.1.min.js"></script>
     <script src="/javascripts/bootstrap.min.js"></script>
-    <script src="/javascripts/material.min.js"></script>
     <script src="/javascripts/script.js"></script>
-  </body>
+</body>
+
 </html>
